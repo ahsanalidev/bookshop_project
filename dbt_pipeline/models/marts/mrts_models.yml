@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: obt_sales
+    columns:
+      - name: id
+        quote: true
+      - name: annees
+        quote: true
+      - name: mois
+        quote: true
+      - name: jour
+        quote: true
+      - name: pu
+        quote: true
+      - name: qte
+        quote: true
+      - name: facture_id
+        quote: true
+      - name: facture_code
+        quote: true
+      - name: qte_totale
+        quote: true
+      - name: total_amount
+        quote: true
+      - name: total_paid
+        quote: true
+      - name: category_intitule
+        quote: true
+      - name: book_code
+        quote: true
+      - name: book_intitule
+        quote: true
+      - name: isbn_10
+        quote: true
+      - name: isbn_13
+        quote: true
+      - name: customer_code
+        quote: true
+      - name: customer_nom
+        quote: true
+      

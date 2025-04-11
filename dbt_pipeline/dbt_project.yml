@@ -1,0 +1,33 @@
+name: "bookshop_dbt"
+version: "1.0.0"
+
+profile: "bookshop_dbt"
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+quoting:
+  identifier: true
+  schema: false
+  database: false
+
+models:
+  bookshop_dbt:
+    staging:
+      +materialized: table
+      +schema: STAGING
+      snowflake_warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+    warehouse:
+      +materialized: table
+      +schema: WAREHOUSE
+      snowflake_warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+    marts:
+      +materialized: table
+      +schema: MARTS
+      snowflake_warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"

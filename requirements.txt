@@ -1,0 +1,10 @@
+psycopg2-binary 
+snowflake-connector-python 
+pandas
+dbt-core
+dbt-snowflake
+streamlit
+plotly
+python-dotenv
+sqlalchemy
+pyarrow<19.0.0

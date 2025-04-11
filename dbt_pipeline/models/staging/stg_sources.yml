@@ -1,0 +1,52 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+    schema: RAW
+    quoting:
+      identifier: true
+      schema: false
+      database: false
+    tables:
+      - name: category
+        columns:
+          - name: id
+          - name: intitule
+          - name: created_at
+      - name: books
+        columns:
+          - name: id
+          - name: category_id
+          - name: code
+          - name: intitule
+          - name: isbn_10
+          - name: isbn_13
+          - name: created_at
+      - name: customers
+        columns:
+          - name: id
+          - name: code
+          - name: first_name
+          - name: last_name
+          - name: created_at
+      - name: factures
+        columns:
+          - name: id
+          - name: code
+          - name: date_edit
+          - name: customer_id
+          - name: qte_totale
+          - name: total_amount
+          - name: total_paid
+          - name: created_at
+      - name: ventes
+        columns:
+          - name: id
+          - name: code
+          - name: date_edit
+          - name: book_id
+          - name: facture_id
+          - name: pu
+          - name: qte
+          - name: created_at

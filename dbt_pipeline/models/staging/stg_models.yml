@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: stg_books
+    columns:
+      - name: id
+        quote: true
+      - name: category_id
+        quote: true
+      - name: code
+        quote: true
+      - name: intitule
+        quote: true
+      - name: isbn_10
+        quote: true
+      - name: isbn_13
+        quote: true
+      - name: created_at
+        quote: true
+
+  - name: stg_category
+    columns:
+      - name: id
+        quote: true
+      - name: intitule
+        quote: true
+      - name: created_at
+        quote: true
+
+  - name: stg_customers
+    columns:
+      - name: id
+        quote: true
+      - name: code
+        quote: true
+      - name: first_name
+        quote: true
+      - name: last_name
+        quote: true
+      - name: created_at
+        quote: true
+
+  - name: stg_factures
+    description: "Staging model for invoices data"
+    columns:
+      - name: id
+        quote: true
+      - name: code
+        quote: true
+      - name: date_edit
+        quote: true
+      - name: customers_id
+        quote: true
+      - name: qte_totale
+        quote: true
+      - name: total_amount
+        quote: true
+      - name: total_paid
+        quote: true
+      - name: created_at
+        quote: true
+
+  - name: stg_ventes
+    description: "Staging model for sales data"
+    columns:
+      - name: id
+        quote: true
+      - name: code
+        quote: true
+      - name: date_edit
+        quote: true
+      - name: factures_id
+        quote: true
+      - name: books_id
+        quote: true
+      - name: pu
+        quote: true
+      - name: qte
+        quote: true
+      - name: created_at
+        quote: true

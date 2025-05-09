@@ -10,7 +10,7 @@ load_dotenv()
 
 # Absolute path to the DBT project on the host
 DBT_PROJECT_HOST_PATH = str(
-  '/Users/paulpascal/Workspace/SIDE/bigdata_bookshop/bookshop_project/dbt_pipeline'
+  '/home/mr.ahsanali/bookshop_project/dbt_pipeline'
 )
 
 dag = DAG(
